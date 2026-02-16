@@ -61,7 +61,7 @@ export default function Education() {
             </motion.div>
 
             {/* Timeline */}
-            <div className="relative ml-3">
+            <div className="relative ml-4">
                 {/* Line */}
                 <div className="absolute left-0 top-2 bottom-2 w-px bg-border-color" />
 
@@ -75,25 +75,25 @@ export default function Education() {
                             className="relative pl-8"
                         >
                             {/* Dot */}
-                            <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-accent" />
+                            <div className="absolute left-[-4px] top-3 w-2 h-2 rounded-full bg-accent" />
 
                             <div className="card">
-                                <div className="flex items-start justify-between gap-2 mb-2 flex-wrap">
-                                    <div className="flex items-center gap-2">
-                                        <span className="text-sm">{item.icon}</span>
+                                <div className="flex items-start justify-between gap-3 mb-2 flex-wrap">
+                                    <div className="flex items-center gap-2.5">
+                                        <span className="text-base">{item.icon}</span>
                                         <div>
-                                            <h3 className="text-sm font-semibold text-heading">{item.title}</h3>
-                                            <p className="text-[11px] text-muted">{item.org}</p>
+                                            <h3 className="text-base font-bold text-heading">{item.title}</h3>
+                                            <p className="text-xs text-muted mt-0.5">{item.org}</p>
                                         </div>
                                     </div>
-                                    <span className="text-[11px] font-mono text-accent whitespace-nowrap">{item.year}</span>
+                                    <span className="text-xs font-mono text-accent font-medium whitespace-nowrap">{item.year}</span>
                                 </div>
 
-                                <p className="text-sm text-body leading-relaxed mb-2">{item.desc}</p>
+                                <p className="text-sm text-body leading-relaxed mb-3">{item.desc}</p>
 
-                                <div className="flex flex-wrap gap-1.5">
+                                <div className="flex flex-wrap gap-2">
                                     {item.tags.map(t => (
-                                        <span key={t} className="tag text-[11px]">{t}</span>
+                                        <span key={t} className="tag">{t}</span>
                                     ))}
                                 </div>
                             </div>

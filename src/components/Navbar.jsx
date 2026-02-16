@@ -36,19 +36,19 @@ export default function Navbar() {
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${isScrolled ? 'bg-bg/95 backdrop-blur-sm border-b border-border-color' : 'bg-transparent'}`}>
             <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
                 {/* Logo */}
-                <a href="#home" className="text-heading font-semibold text-sm tracking-tight hover:text-accent transition-colors">
+                <a href="#home" className="text-heading font-bold text-base tracking-tight hover:text-accent transition-colors">
                     Sandeep Sisodiya
                 </a>
 
                 {/* Desktop Links */}
-                <div className="hidden md:flex items-center gap-6">
+                <div className="hidden md:flex items-center gap-7">
                     {links.map(l => {
                         const id = l.href.replace('#', '')
                         return (
                             <a
                                 key={l.label}
                                 href={l.href}
-                                className={`text-xs font-medium uppercase tracking-wide transition-colors ${activeSection === id ? 'text-accent' : 'text-muted hover:text-heading'}`}
+                                className={`text-sm font-medium tracking-wide transition-colors ${activeSection === id ? 'text-accent' : 'text-muted hover:text-heading'}`}
                             >
                                 {l.label}
                             </a>

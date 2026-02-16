@@ -42,7 +42,7 @@ export default function Skills() {
                 <p className="section-desc">Technologies and tools I use to build applications</p>
             </motion.div>
 
-            <div className="space-y-8">
+            <div className="space-y-10">
                 {Object.entries(skills).map(([category, items]) => (
                     <motion.div
                         key={category}
@@ -50,16 +50,16 @@ export default function Skills() {
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.4, delay: 0.1 }}
                     >
-                        <h3 className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">
+                        <h3 className="text-sm font-semibold text-muted uppercase tracking-wide mb-4">
                             {category}
                         </h3>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                             {items.map(skill => (
-                                <div key={skill.name} className="card flex items-center gap-2.5">
-                                    <span className="text-base flex-shrink-0">{skill.icon}</span>
+                                <div key={skill.name} className="card flex items-center gap-3">
+                                    <span className="text-lg flex-shrink-0">{skill.icon}</span>
                                     <div className="min-w-0">
-                                        <p className="text-sm text-heading font-medium truncate">{skill.name}</p>
-                                        <p className="text-[11px] text-muted">{skill.note}</p>
+                                        <p className="text-sm text-heading font-semibold truncate">{skill.name}</p>
+                                        <p className="text-xs text-muted">{skill.note}</p>
                                     </div>
                                 </div>
                             ))}
