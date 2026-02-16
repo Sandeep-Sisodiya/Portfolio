@@ -36,7 +36,7 @@
 
   /* Wrapper for all sections — consistent width and centering */
   .section {
-    @apply w-full max-w-3xl mx-auto px-6 py-24;
+    @apply w-full max-w-5xl mx-auto px-6 md:px-10 py-24;
   }
 
   .section-label {
@@ -48,12 +48,12 @@
   }
 
   .section-desc {
-    @apply text-body text-base mb-10 max-w-xl;
+    @apply text-body text-base mb-10 max-w-2xl;
   }
 
   /* Divider between sections */
   .section-divider {
-    @apply w-full max-w-3xl mx-auto border-t border-border-color;
+    @apply w-full max-w-5xl mx-auto border-t border-border-color;
   }
 
   /* Card */

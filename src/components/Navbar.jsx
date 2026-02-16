@@ -34,7 +34,7 @@ export default function Navbar() {
 
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${isScrolled ? 'bg-bg/95 backdrop-blur-sm border-b border-border-color' : 'bg-transparent'}`}>
-            <div className="max-w-3xl mx-auto px-6 flex items-center justify-between h-14">
+            <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
                 {/* Logo */}
                 <a href="#home" className="text-heading font-semibold text-sm tracking-tight hover:text-accent transition-colors">
                     Sandeep Sisodiya
@@ -74,7 +74,7 @@ export default function Navbar() {
             {/* Mobile Menu */}
             {mobileOpen && (
                 <div className="md:hidden bg-bg border-b border-border-color">
-                    <div className="max-w-3xl mx-auto px-6 py-4 flex flex-col gap-3">
+                    <div className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-3">
                         {links.map(l => {
                             const id = l.href.replace('#', '')
                             return (
