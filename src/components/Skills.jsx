@@ -43,12 +43,12 @@ export default function Skills() {
             </motion.div>
 
             <div className="space-y-10">
-                {Object.entries(skills).map(([category, items]) => (
+                {Object.entries(skills).map(([category, items], catIdx) => (
                     <motion.div
                         key={category}
                         initial={{ opacity: 0, y: 10 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.4, delay: 0.1 }}
+                        transition={{ duration: 0.4, delay: 0.05 + catIdx * 0.08 }}
                     >
                         <h3 className="text-sm font-semibold text-muted uppercase tracking-wide mb-4">
                             {category}

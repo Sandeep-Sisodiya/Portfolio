@@ -12,7 +12,7 @@ import './index.css'
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen bg-bg">
       <Navbar />
 
       <main>
@@ -33,7 +33,7 @@ function App() {
       <Footer />
 
       <ScrollToTop />
-    </>
+    </div>
   )
 }
 
@@ -54,7 +54,7 @@ function ScrollToTop() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-6 right-6 z-40 w-9 h-9 rounded-md bg-surface border border-border-color flex items-center justify-center text-muted hover:text-heading hover:border-accent/40 transition-colors"
+          className="fixed bottom-6 right-6 z-40 w-10 h-10 rounded-lg bg-surface border border-border-color shadow-card flex items-center justify-center text-muted hover:text-accent hover:shadow-card-hover transition-all duration-200"
           aria-label="Scroll to top"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

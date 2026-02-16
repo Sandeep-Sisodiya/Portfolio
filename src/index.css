@@ -20,7 +20,7 @@
   }
 
   ::selection {
-    @apply bg-accent/20 text-white;
+    @apply bg-accent/15 text-heading;
   }
 
   h1 {
@@ -54,7 +54,7 @@
   }
 
   .section-label {
-    @apply text-accent font-mono text-xs uppercase tracking-wider mb-4 block font-medium;
+    @apply text-accent font-mono text-xs uppercase tracking-widest mb-4 block font-medium;
   }
 
   .section-title {
@@ -71,33 +71,71 @@
 
   /* ── Card ── */
   .card {
-    @apply bg-surface border border-border-color rounded-lg p-5 md:p-6;
-    transition: border-color 0.2s ease;
+    @apply bg-surface border border-border-color rounded-xl p-5 md:p-6 shadow-card;
+    transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
   }
 
   .card:hover {
-    @apply border-accent/30;
+    @apply shadow-card-hover;
+    transform: translateY(-2px);
   }
 
   /* ── Buttons ── */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md text-sm font-semibold transition-colors duration-150;
-    @apply bg-accent text-white hover:bg-accent-hover;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold shadow-btn;
+    @apply bg-accent text-white;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    @apply bg-accent-hover;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(74, 124, 111, 0.25);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md text-sm font-semibold transition-colors duration-150;
-    @apply border border-border-color text-body hover:border-accent hover:text-accent;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold;
+    @apply border border-border-color text-heading bg-surface;
+    transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  }
+
+  .btn-outline:hover {
+    @apply border-accent text-accent;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .btn-outline:active {
+    transform: translateY(0);
   }
 
   /* ── Tag ── */
   .tag {
-    @apply inline-block px-2.5 py-1 rounded text-xs font-medium bg-surface border border-border-color text-muted;
+    @apply inline-block px-2.5 py-1 rounded-md text-xs font-medium bg-surface-alt text-body border border-transparent;
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .tag:hover {
+    @apply text-accent;
+  }
+
+  /* ── Link ── */
+  .link {
+    @apply text-body font-medium;
+    transition: color 0.2s ease;
+  }
+
+  .link:hover {
+    @apply text-accent;
   }
 
   /* ── Scrollbar ── */
   ::-webkit-scrollbar {
-    @apply w-1;
+    @apply w-1.5;
   }
 
   ::-webkit-scrollbar-track {
@@ -106,6 +144,10 @@
 
   ::-webkit-scrollbar-thumb {
     @apply bg-border-color rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted;
   }
 }
 

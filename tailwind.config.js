@@ -7,15 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        'bg': '#0a0a0a',
-        'surface': '#141414',
-        'surface-hover': '#1a1a1a',
-        'accent': '#5b8a72',
-        'accent-hover': '#6b9e82',
-        'heading': '#ededed',
-        'body': '#a3a3a3',
-        'muted': '#737373',
-        'border-color': '#262626',
+        'bg': '#fafafa',
+        'surface': '#ffffff',
+        'surface-alt': '#f3f4f6',
+        'accent': '#4a7c6f',
+        'accent-hover': '#3d6b5f',
+        'heading': '#1a1a1a',
+        'body': '#4b5563',
+        'muted': '#9ca3af',
+        'border-color': '#e5e7eb',
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
@@ -32,11 +32,10 @@ export default {
         '4xl': ['2.5rem', { lineHeight: '1.15' }],
         '5xl': ['3.25rem', { lineHeight: '1.1' }],
       },
-      letterSpacing: {
-        'tight': '-0.02em',
-        'normal': '0em',
-        'wide': '0.04em',
-        'wider': '0.08em',
+      boxShadow: {
+        'card': '0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)',
+        'card-hover': '0 10px 25px rgba(0,0,0,0.08), 0 4px 10px rgba(0,0,0,0.04)',
+        'btn': '0 1px 2px rgba(0,0,0,0.08)',
       },
     },
   },

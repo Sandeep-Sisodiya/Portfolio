@@ -33,22 +33,22 @@ export default function Navbar() {
     ]
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${isScrolled ? 'bg-bg/95 backdrop-blur-sm border-b border-border-color' : 'bg-transparent'}`}>
-            <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-surface/95 backdrop-blur-md border-b border-border-color shadow-sm' : 'bg-transparent'}`}>
+            <div className="max-w-5xl mx-auto px-6 md:px-10 flex items-center justify-between h-16">
                 {/* Logo */}
-                <a href="#home" className="text-heading font-bold text-base tracking-tight hover:text-accent transition-colors">
+                <a href="#home" className="text-heading font-bold text-base tracking-tight hover:text-accent transition-colors duration-200">
                     Sandeep Sisodiya
                 </a>
 
                 {/* Desktop Links */}
-                <div className="hidden md:flex items-center gap-7">
+                <div className="hidden md:flex items-center gap-8">
                     {links.map(l => {
                         const id = l.href.replace('#', '')
                         return (
                             <a
                                 key={l.label}
                                 href={l.href}
-                                className={`text-sm font-medium tracking-wide transition-colors ${activeSection === id ? 'text-accent' : 'text-muted hover:text-heading'}`}
+                                className={`text-sm font-medium transition-colors duration-200 ${activeSection === id ? 'text-accent' : 'text-body hover:text-heading'}`}
                             >
                                 {l.label}
                             </a>
@@ -58,7 +58,7 @@ export default function Navbar() {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden text-muted hover:text-heading transition-colors"
+                    className="md:hidden text-body hover:text-heading transition-colors duration-200"
                     onClick={() => setMobileOpen(!mobileOpen)}
                     aria-label="Menu"
                 >
@@ -73,7 +73,7 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {mobileOpen && (
-                <div className="md:hidden bg-bg border-b border-border-color">
+                <div className="md:hidden bg-surface border-b border-border-color shadow-sm">
                     <div className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-3">
                         {links.map(l => {
                             const id = l.href.replace('#', '')
@@ -82,7 +82,7 @@ export default function Navbar() {
                                     key={l.label}
                                     href={l.href}
                                     onClick={() => setMobileOpen(false)}
-                                    className={`text-sm font-medium transition-colors ${activeSection === id ? 'text-accent' : 'text-muted hover:text-heading'}`}
+                                    className={`text-sm font-medium py-1 transition-colors duration-200 ${activeSection === id ? 'text-accent' : 'text-body hover:text-heading'}`}
                                 >
                                     {l.label}
                                 </a>
