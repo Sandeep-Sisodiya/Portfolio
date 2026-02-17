@@ -20,27 +20,18 @@ export default function Contact() {
         }, 1200)
     }
 
-    const inputClass = "w-full px-4 py-3 bg-bg border border-border-color rounded-lg text-heading text-sm placeholder:text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/10 transition-all duration-200"
+    const inputClass = "w-full px-4 py-3 bg-bg-light border border-border-color rounded-lg text-heading text-sm placeholder:text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/15 transition-all duration-200"
 
     return (
         <section id="contact" className="section" ref={ref}>
-            <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.4 }}
-            >
+            <motion.div initial={{ opacity: 0, y: 12 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.4 }}>
                 <span className="section-label">Contact</span>
                 <h2 className="section-title">Get in Touch</h2>
                 <p className="section-desc">Have a project in mind or want to collaborate? Feel free to reach out.</p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-[1fr_260px] gap-8">
-                {/* Form */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.4, delay: 0.1 }}
-                >
+                <motion.div initial={{ opacity: 0, y: 10 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.4, delay: 0.1 }}>
                     <div className="card">
                         <form onSubmit={handleSubmit} className="space-y-5">
                             <div>
@@ -62,25 +53,15 @@ export default function Contact() {
                     </div>
                 </motion.div>
 
-                {/* Sidebar */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.4, delay: 0.15 }}
-                    className="space-y-4"
-                >
+                <motion.div initial={{ opacity: 0, y: 10 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.4, delay: 0.15 }} className="space-y-4">
                     <div className="card">
                         <p className="text-xs text-muted uppercase tracking-wider font-medium mb-1.5">Email</p>
-                        <a href="mailto:sandeep@example.com" className="text-sm text-heading font-medium hover:text-accent transition-colors duration-200 break-all">
-                            sandeep@example.com
-                        </a>
+                        <a href="mailto:sandeep@example.com" className="text-sm text-heading font-medium hover:text-accent transition-colors duration-200 break-all">sandeep@example.com</a>
                     </div>
-
                     <div className="card">
                         <p className="text-xs text-muted uppercase tracking-wider font-medium mb-1.5">Location</p>
                         <p className="text-sm text-heading font-medium">Ghaziabad, India</p>
                     </div>
-
                     <div className="card">
                         <p className="text-xs text-muted uppercase tracking-wider font-medium mb-2.5">Social</p>
                         <div className="flex gap-4">
@@ -95,15 +76,12 @@ export default function Contact() {
                             ))}
                         </div>
                     </div>
-
                     <div className="card">
                         <div className="flex items-center gap-2 mb-1.5">
-                            <span className="w-2 h-2 rounded-full bg-green-500" />
+                            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                             <p className="text-sm font-semibold text-heading">Available</p>
                         </div>
-                        <p className="text-xs text-muted leading-relaxed">
-                            Open to internships and freelance projects.
-                        </p>
+                        <p className="text-xs text-muted leading-relaxed">Open to internships and freelance projects.</p>
                     </div>
                 </motion.div>
             </div>

@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Education from './components/Education'
@@ -17,8 +16,6 @@ function App() {
 
       <main>
         <Hero />
-        <div className="section-divider" />
-        <About />
         <div className="section-divider" />
         <Skills />
         <div className="section-divider" />
@@ -54,7 +51,7 @@ function ScrollToTop() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-6 right-6 z-40 w-10 h-10 rounded-lg bg-surface border border-border-color shadow-card flex items-center justify-center text-muted hover:text-accent hover:shadow-card-hover transition-all duration-200"
+          className="fixed bottom-6 right-6 z-40 w-10 h-10 rounded-lg bg-surface border border-border-color shadow-card flex items-center justify-center text-muted hover:text-accent hover:shadow-glow hover:border-accent/30 transition-all duration-300"
           aria-label="Scroll to top"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

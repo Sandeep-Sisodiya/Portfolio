@@ -2,46 +2,11 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 const timeline = [
-    {
-        year: '2023 – 2027',
-        title: 'B.Tech in Computer Science',
-        org: 'KIET Group of Institutions, Ghaziabad',
-        desc: 'Pursuing CSE with focus on core fundamentals — DSA, OS, DBMS, OOP, System Design.',
-        tags: ['CGPA: 8.35+', 'Software Engineering'],
-        icon: '🎓',
-    },
-    {
-        year: '2024',
-        title: 'Google Gemini Buildathon',
-        org: 'AI Development Competition',
-        desc: 'Built AI-powered mental health therapy app using Gemini API with Flutter and Firebase.',
-        tags: ['Gemini API', 'CBT/DBT Modules'],
-        icon: '🏆',
-    },
-    {
-        year: '2024',
-        title: 'OASIS Internship',
-        org: 'OASIS Infobyte',
-        desc: 'Android development internship focused on real-world application development and collaboration.',
-        tags: ['Android & Flutter', 'Code Review'],
-        icon: '🚀',
-    },
-    {
-        year: '2024',
-        title: 'CodeVita Participation',
-        org: 'TCS CodeVita',
-        desc: 'Competitive programming challenge focusing on problem-solving and algorithm optimization.',
-        tags: ['Algorithm Design', 'Java'],
-        icon: '💻',
-    },
-    {
-        year: '2023 – Present',
-        title: 'Null Classes',
-        org: 'Advanced Programming Training',
-        desc: 'Specialized training in competitive programming, system design, and interview preparation.',
-        tags: ['Advanced DSA', 'System Design'],
-        icon: '📚',
-    },
+    { year: '2023 – 2027', title: 'B.Tech in Computer Science', org: 'KIET Group of Institutions, Ghaziabad', desc: 'Pursuing CSE with focus on DSA, OS, DBMS, OOP, System Design.', tags: ['CGPA: 8.35+', 'Software Engineering'], icon: '🎓' },
+    { year: '2024', title: 'Google Gemini Buildathon', org: 'AI Development Competition', desc: 'Built AI-powered therapy app using Gemini API with Flutter and Firebase.', tags: ['Gemini API', 'CBT/DBT Modules'], icon: '🏆' },
+    { year: '2024', title: 'OASIS Internship', org: 'OASIS Infobyte', desc: 'Android development internship focused on real-world app development.', tags: ['Android & Flutter', 'Code Review'], icon: '🚀' },
+    { year: '2024', title: 'CodeVita Participation', org: 'TCS CodeVita', desc: 'Competitive programming focusing on problem-solving and optimization.', tags: ['Algorithm Design', 'Java'], icon: '💻' },
+    { year: '2023 – Present', title: 'Null Classes', org: 'Advanced Programming Training', desc: 'Specialized training in competitive programming and system design.', tags: ['Advanced DSA', 'System Design'], icon: '📚' },
 ]
 
 export default function Education() {
@@ -50,30 +15,18 @@ export default function Education() {
 
     return (
         <section id="education" className="section" ref={ref}>
-            <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.4 }}
-            >
+            <motion.div initial={{ opacity: 0, y: 12 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.4 }}>
                 <span className="section-label">Journey</span>
                 <h2 className="section-title">Education & Milestones</h2>
                 <p className="section-desc">My path through learning, building, and growing</p>
             </motion.div>
 
-            {/* Timeline */}
             <div className="relative ml-4">
                 <div className="absolute left-0 top-2 bottom-2 w-px bg-border-color" />
 
                 <div className="space-y-5">
                     {timeline.map((item, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.4, delay: 0.05 + i * 0.08 }}
-                            className="relative pl-8"
-                        >
-                            {/* Dot */}
+                        <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.4, delay: 0.05 + i * 0.08 }} className="relative pl-8">
                             <div className="absolute left-[-5px] top-[1.4rem] w-2.5 h-2.5 rounded-full bg-accent border-2 border-bg" />
 
                             <div className="card">
@@ -85,15 +38,11 @@ export default function Education() {
                                             <p className="text-xs text-muted mt-0.5">{item.org}</p>
                                         </div>
                                     </div>
-                                    <span className="text-xs font-mono text-accent font-medium whitespace-nowrap bg-accent/8 px-2 py-0.5 rounded">{item.year}</span>
+                                    <span className="text-xs font-mono text-accent font-medium whitespace-nowrap bg-accent/10 px-2.5 py-1 rounded-md">{item.year}</span>
                                 </div>
-
                                 <p className="text-sm text-body leading-relaxed mb-3">{item.desc}</p>
-
                                 <div className="flex flex-wrap gap-2">
-                                    {item.tags.map(t => (
-                                        <span key={t} className="tag">{t}</span>
-                                    ))}
+                                    {item.tags.map(t => <span key={t} className="tag">{t}</span>)}
                                 </div>
                             </div>
                         </motion.div>

@@ -8,10 +8,8 @@ export default function Navbar() {
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 40)
-
-            const sections = ['home', 'about', 'skills', 'projects', 'education', 'contact']
+            const sections = ['home', 'skills', 'projects', 'education', 'contact']
             const scrollPos = window.scrollY + 120
-
             for (const id of sections) {
                 const el = document.getElementById(id)
                 if (el && scrollPos >= el.offsetTop && scrollPos < el.offsetTop + el.offsetHeight) {
@@ -25,7 +23,6 @@ export default function Navbar() {
     }, [])
 
     const links = [
-        { label: 'About', href: '#about' },
         { label: 'Skills', href: '#skills' },
         { label: 'Projects', href: '#projects' },
         { label: 'Journey', href: '#education' },
@@ -33,35 +30,24 @@ export default function Navbar() {
     ]
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-surface/95 backdrop-blur-md border-b border-border-color shadow-sm' : 'bg-transparent'}`}>
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-bg/95 backdrop-blur-md border-b border-border-color' : 'bg-transparent'}`}>
             <div className="max-w-5xl mx-auto px-6 md:px-10 flex items-center justify-between h-16">
-                {/* Logo */}
-                <a href="#home" className="text-heading font-bold text-base tracking-tight hover:text-accent transition-colors duration-200">
-                    Sandeep Sisodiya
+                <a href="#home" className="text-heading font-bold text-lg tracking-tight hover:text-accent transition-colors duration-200">
+                    Sandeep<span className="text-accent">.</span>
                 </a>
 
-                {/* Desktop Links */}
                 <div className="hidden md:flex items-center gap-8">
                     {links.map(l => {
                         const id = l.href.replace('#', '')
                         return (
-                            <a
-                                key={l.label}
-                                href={l.href}
-                                className={`text-sm font-medium transition-colors duration-200 ${activeSection === id ? 'text-accent' : 'text-body hover:text-heading'}`}
-                            >
+                            <a key={l.label} href={l.href} className={`text-sm font-medium transition-colors duration-200 ${activeSection === id ? 'text-accent' : 'text-body hover:text-heading'}`}>
                                 {l.label}
                             </a>
                         )
                     })}
                 </div>
 
-                {/* Mobile Toggle */}
-                <button
-                    className="md:hidden text-body hover:text-heading transition-colors duration-200"
-                    onClick={() => setMobileOpen(!mobileOpen)}
-                    aria-label="Menu"
-                >
+                <button className="md:hidden text-body hover:text-heading transition-colors" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         {mobileOpen
                             ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
@@ -71,23 +57,14 @@ export default function Navbar() {
                 </button>
             </div>
 
-            {/* Mobile Menu */}
             {mobileOpen && (
-                <div className="md:hidden bg-surface border-b border-border-color shadow-sm">
+                <div className="md:hidden bg-bg border-b border-border-color">
                     <div className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-3">
-                        {links.map(l => {
-                            const id = l.href.replace('#', '')
-                            return (
-                                <a
-                                    key={l.label}
-                                    href={l.href}
-                                    onClick={() => setMobileOpen(false)}
-                                    className={`text-sm font-medium py-1 transition-colors duration-200 ${activeSection === id ? 'text-accent' : 'text-body hover:text-heading'}`}
-                                >
-                                    {l.label}
-                                </a>
-                            )
-                        })}
+                        {links.map(l => (
+                            <a key={l.label} href={l.href} onClick={() => setMobileOpen(false)} className={`text-sm font-medium py-1 transition-colors duration-200 ${activeSection === l.href.replace('#', '') ? 'text-accent' : 'text-body hover:text-heading'}`}>
+                                {l.label}
+                            </a>
+                        ))}
                     </div>
                 </div>
             )}

@@ -56,7 +56,7 @@ export default function Skills() {
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                             {items.map(skill => (
                                 <div key={skill.name} className="card flex items-center gap-3">
-                                    <span className="text-lg flex-shrink-0">{skill.icon}</span>
+                                    <span className="text-xl flex-shrink-0">{skill.icon}</span>
                                     <div className="min-w-0">
                                         <p className="text-sm text-heading font-semibold truncate">{skill.name}</p>
                                         <p className="text-xs text-muted">{skill.note}</p>
