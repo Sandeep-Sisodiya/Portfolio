@@ -10,17 +10,17 @@ const skills = {
     'Frameworks & Libraries': [
         { name: 'Flutter', note: 'Expert', icon: '📱' },
         { name: 'Firebase', note: 'Advanced', icon: '🔥' },
-        { name: 'REST APIs', note: 'Advanced', icon: '🌐' },
-        { name: 'SQLite', note: 'Intermediate', icon: '💾' },
+        { name: 'REST APIs', note: 'Intermediate', icon: '🌐' },
+        { name: 'SQFLite', note: 'Intermediate', icon: '💾' },
         { name: 'Provider', note: 'Advanced', icon: '📦' },
         { name: 'GetX', note: 'Intermediate', icon: '⚡' },
-        { name: 'Bloc', note: 'Advanced', icon: '🔄' },
-        { name: 'Geolocator', note: 'Advanced', icon: '📍' },
+        { name: 'Bloc', note: 'Just Started', icon: '🔄' },
+        { name: 'Geolocator', note: 'One Project', icon: '📍' },
     ],
     Tools: [
         { name: 'Android Studio', note: 'Expert', icon: '🤖' },
         { name: 'VS Code', note: 'Expert', icon: '💻' },
-        { name: 'IntelliJ', note: 'Advanced', icon: '🧠' },
+        { name: 'IntelliJ', note: 'Expert', icon: '🧠' },
         { name: 'Git & GitHub', note: 'Advanced', icon: '🔀' },
     ],
 }
