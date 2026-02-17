@@ -6,7 +6,6 @@ const skills = {
         { name: 'Java', note: 'DSA Expert', icon: '☕' },
         { name: 'Dart', note: 'Advanced', icon: '🎯' },
         { name: 'C', note: 'Intermediate', icon: '⚙️' },
-        { name: 'Python', note: 'Intermediate', icon: '🐍' },
     ],
     'Frameworks & Libraries': [
         { name: 'Flutter', note: 'Expert', icon: '📱' },

@@ -91,7 +91,7 @@ export default function Hero() {
                         { label: 'Experience', value: 'Flutter & Android' },
                         { label: 'Focus', value: 'Clean Architecture' },
                         { label: 'Strength', value: 'DSA in Java' },
-                        { label: 'Passion', value: 'Product Quality' },
+                        { label: 'Passion', value: 'Development' },
                     ].map((item, i) => (
                         <motion.div
                             key={i}
