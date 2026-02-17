@@ -7,7 +7,7 @@ const projects = [
         desc: 'Gemini-powered mental health assistant with adaptive CBT/DBT conversations and personalized therapy sessions.',
         tech: ['Flutter', 'Gemini API', 'Firebase', 'Provider'],
         features: ['AI-powered conversations', 'CBT/DBT therapy modules', 'Progress tracking', 'Secure data encryption'],
-        github: 'https://github.com/sandeep',
+        github: 'https://github.com/Sandeep-Sisodiya/AI_Therapy-Dr.-Savi-',
         icon: '🧠',
     },
     {
@@ -15,11 +15,11 @@ const projects = [
         desc: 'Real-time path tracking application with offline storage and sharing capabilities. Supports 500+ concurrent users.',
         tech: ['Flutter', 'Geolocator', 'SQLite', 'Firebase'],
         features: ['Real-time GPS tracking', 'Offline data storage', 'Path sharing', '500+ active users'],
-        github: 'https://github.com/sandeep',
+        github: 'https://github.com/Sandeep-Sisodiya/Back-Track-App',
         icon: '📍',
     },
     {
-        name: 'Chat Application',
+        name: 'Scrap Hunt App',
         desc: 'WhatsApp-like real-time messaging with <300ms latency. Features Firebase authentication and presence system.',
         tech: ['Flutter', 'Firebase', 'Firestore', 'Authentication'],
         features: ['Real-time messaging', 'User presence', 'Media sharing', 'End-to-end chat flow'],
