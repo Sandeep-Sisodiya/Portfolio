@@ -3,10 +3,10 @@ import { useRef } from 'react'
 
 const timeline = [
     { year: '2023 – 2027', title: 'B.Tech in Computer Science', org: 'KIET Group of Institutions, Ghaziabad', desc: 'Pursuing CSE with focus on DSA, OS, DBMS, OOP, System Design.', tags: ['CGPA: 8.35+', 'Software Engineering'], icon: '🎓' },
-    { year: '2024', title: 'Google Gemini Buildathon', org: 'AI Development Competition', desc: 'Built AI-powered therapy app using Gemini API with Flutter and Firebase.', tags: ['Gemini API', 'CBT/DBT Modules'], icon: '🏆' },
+    { year: 'Oct 2025 - Nov 2025', title: 'Null Classes Intern', org: 'Flutter Developer Internship', desc: 'Specialized training in competitive programming and system design.', tags: ['Flutter', 'Advanced Features'], icon: '📚' },
+    { year: '2025', title: 'Google Gemini Buildathon', org: 'AI Development Competition', desc: 'Built AI-powered therapy app using Gemini API with Flutter and Firebase.', tags: ['Gemini API', 'CBT/DBT Modules'], icon: '🏆' },
     { year: '2024', title: 'OASIS Internship', org: 'OASIS Infobyte', desc: 'Android development internship focused on real-world app development.', tags: ['Android & Flutter', 'Code Review'], icon: '🚀' },
     { year: '2024', title: 'CodeVita Participation', org: 'TCS CodeVita', desc: 'Competitive programming focusing on problem-solving and optimization.', tags: ['Algorithm Design', 'Java'], icon: '💻' },
-    { year: '2023 – Present', title: 'Null Classes', org: 'Advanced Programming Training', desc: 'Specialized training in competitive programming and system design.', tags: ['Advanced DSA', 'System Design'], icon: '📚' },
 ]
 
 export default function Education() {

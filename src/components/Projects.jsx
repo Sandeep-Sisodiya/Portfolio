@@ -23,7 +23,7 @@ const projects = [
         desc: 'Flutter app connecting households with scrap dealers, with pickup scheduling and scrap tracking.',
         tech: ['Flutter', 'Firebase', 'Firestore', 'Authentication'],
         features: ['Real-time messaging', 'User presence', 'Media sharing', 'End-to-end chat flow'],
-        github: 'https://github.com/sandeep',
+        github: 'https://github.com/Sandeep-Sisodiya/Scrap-Hunt-App',
         icon: '💬',
     },
 ]
