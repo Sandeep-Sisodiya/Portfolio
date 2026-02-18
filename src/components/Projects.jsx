@@ -20,7 +20,7 @@ const projects = [
     },
     {
         name: 'Scrap Hunt App',
-        desc: 'WhatsApp-like real-time messaging with <300ms latency. Features Firebase authentication and presence system.',
+        desc: 'Flutter app connecting households with scrap dealers, with pickup scheduling and scrap tracking.',
         tech: ['Flutter', 'Firebase', 'Firestore', 'Authentication'],
         features: ['Real-time messaging', 'User presence', 'Media sharing', 'End-to-end chat flow'],
         github: 'https://github.com/sandeep',
