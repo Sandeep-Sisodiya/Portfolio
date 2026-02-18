@@ -6,7 +6,7 @@ const timeline = [
     { year: 'Oct 2025 - Nov 2025', title: 'Null Classes Intern', org: 'Flutter Developer Internship', desc: 'I worked on real-time app development, strengthened my Flutter & Firebase skills.', tags: ['Flutter', 'Advanced Features'], icon: '📚' },
     { year: '2025', title: 'Google Gemini Buildathon', org: 'AI Development Competition', desc: 'Built AI-powered therapy app using Gemini API with Flutter and Firebase.', tags: ['Gemini API', 'CBT/DBT Modules'], icon: '🏆' },
     { year: 'Jul 2025 - Aug 2025', title: 'OASIS Flutter Internship', org: 'OASIS Infobyte', desc: 'Android development internship focused on real-world app development.', tags: ['Android & Flutter', 'Code Review'], icon: '🚀' },
-    { year: 'Mar 2025', title: 'CodeVita Participation', org: 'TCS CodeVita', desc: 'Competitive programming focusing on problem-solving and optimization.', tags: ['Algorithm Design', 'Java'], icon: '💻' },
+    { year: 'Mar 2025', title: 'CodeVita Participation', org: 'TCS CodeVita', desc: 'Coding Commpetition (DSA in JAVA)', tags: ['Algorithm Design', 'Java'], icon: '💻' },
 ]
 
 export default function Education() {
