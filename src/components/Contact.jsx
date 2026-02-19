@@ -56,12 +56,12 @@ export default function Contact() {
                 <motion.div initial={{ opacity: 0, y: 10 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.4, delay: 0.15 }} className="space-y-4">
                     <div className="card">
                         <p className="text-xs text-muted uppercase tracking-wider font-medium mb-1.5">Email</p>
-<a
-  href="mailto:sandeepsisodiya16092004@gmail.com"
-  className="text-sm text-heading font-medium hover:text-accent transition-colors duration-200 break-all"
->
-  sandeepsisodiya16092004@gmail.com
-</a>
+                        <a
+                            href="mailto:sandeepsisodiya16092004@gmail.com"
+                            className="text-sm text-heading font-medium hover:text-accent transition-colors duration-200 break-all"
+                        >
+                            sandeepsisodiya16092004@gmail.com
+                        </a>
                     </div>
                     <div className="card">
                         <p className="text-xs text-muted uppercase tracking-wider font-medium mb-1.5">Location</p>
