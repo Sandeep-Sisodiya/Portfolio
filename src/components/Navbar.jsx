@@ -33,7 +33,7 @@ export default function Navbar() {
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-bg/95 backdrop-blur-md border-b border-border-color' : 'bg-transparent'}`}>
             <div className="max-w-5xl mx-auto px-6 md:px-10 flex items-center justify-between h-16">
                 <a href="#home" className="text-heading font-bold text-lg tracking-tight hover:text-accent transition-colors duration-200">
-                    Sandeep<span className="text-accent">.</span>
+                    S<span className="text-accent">S</span>
                 </a>
 
                 <div className="hidden md:flex items-center gap-8">

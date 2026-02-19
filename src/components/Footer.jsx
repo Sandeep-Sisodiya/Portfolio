@@ -6,9 +6,9 @@ export default function Footer() {
             </p>
             <div className="flex gap-5">
                 {[
-                    { label: 'GitHub', url: 'https://github.com/sandeep' },
-                    { label: 'LinkedIn', url: 'https://linkedin.com/in/sandeep' },
-                    { label: 'Twitter', url: 'https://twitter.com/sandeep' },
+                    { label: 'GitHub', url: 'https://github.com/Sandeep-Sisodiya' },
+                    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/sandeep-sisodiya-830114298/' },
+                    { label: 'Twitter', url: 'https://x.com/Sandeep_18_26' },
                 ].map(l => (
                     <a key={l.label} href={l.url} target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-accent transition-colors duration-200 font-medium">
                         {l.label}

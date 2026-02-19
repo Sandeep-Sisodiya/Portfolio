@@ -9,16 +9,39 @@ export default function Contact() {
     const [sending, setSending] = useState(false)
     const [sent, setSent] = useState(false)
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setSending(true)
-        setTimeout(() => {
-            setSending(false)
+    const handleSubmit = async (e) => {
+    e.preventDefault()
+    setSending(true)
+
+    try {
+        const res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify({
+                access_key: "1e3b376a-0207-4b94-abe0-a057a3eec191",   // ← paste key
+                name: form.name,
+                email: form.email,
+                message: form.message,
+                subject: "New Portfolio Message",
+            }),
+        })
+
+        const data = await res.json()
+
+        if (data.success) {
             setSent(true)
             setForm({ name: '', email: '', message: '' })
-            setTimeout(() => setSent(false), 3000)
-        }, 1200)
+        }
+    } catch (error) {
+        console.error("Error:", error)
     }
+
+    setSending(false)
+    setTimeout(() => setSent(false), 3000)
+}
 
     const inputClass = "w-full px-4 py-3 bg-bg-light border border-border-color rounded-lg text-heading text-sm placeholder:text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/15 transition-all duration-200"
 
@@ -34,6 +57,9 @@ export default function Contact() {
                 <motion.div initial={{ opacity: 0, y: 10 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.4, delay: 0.1 }}>
                     <div className="card">
                         <form onSubmit={handleSubmit} className="space-y-5">
+                            <input type="hidden" name="from_name" value="Portfolio Contact" />
+                            <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+ 
                             <div>
                                 <label htmlFor="name" className="block text-sm font-semibold text-heading mb-2">Name</label>
                                 <input type="text" id="name" name="name" required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} className={inputClass} placeholder="Your name" />
